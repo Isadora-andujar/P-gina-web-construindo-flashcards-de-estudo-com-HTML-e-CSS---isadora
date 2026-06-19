@@ -1,292 +1,124 @@
-# P-gina-web-construindo-flashcards-de-estudo-com-HTML-e-CSS---isadora
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Conecta Aí - Descubra a Verdade</title>
-</head>
-<body>
-    <header class="cabecalho">
-        <div class="logo-container">
-            <h1>🔍 Conecta Aí</h1>
-            <span class="tagline">Descubra a verdade</span>
-        </div>
-        <nav>
-            <a href="#" class="cabecalho-link active">Início</a>
-            <a href="#" class="cabecalho-link">Sobre</a>
-            <a href="#" class="cabecalho-link">Contato</a>
-        </nav>
-        <button class="menu-mobile">☰</button>
-    </header>
-
-    <main>
-        <div class="hero">
-            <h2>🐧 Descubra a Verdade sobre os Animais 🦁</h2>
-            <p>Passe o mouse sobre os cards e desafie seus conhecimentos!</p>
-        </div>
-
-        <section class="cards-container">
-        
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🐧</div>
-                        <h3>Pinguins</h3>
-                        <p class="fake-info">❌ Pinguins conseguem voar como pássaros!</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🐧</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Pinguins não voam, mas são excelentes nadadores, alcançando até 36 km/h na água!</p>
-                        <div class="fun-fact">🎯 Curiosidade: O pinguim-imperador pode mergulhar a mais de 500 metros</div>
-                    </div>
-                </div>
-            </article>
-
-      
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🦒</div>
-                        <h3>Girafas</h3>
-                        <p class="fake-info">❌ Girafas dormem 8 horas por dia</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🦒</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Girafas dormem apenas 30 minutos a 2 horas por dia!</p>
-                        <div class="fun-fact">🎯 Curiosidade: O coração de uma girafa pesa cerca de 11 kg</div>
-                    </div>
-                </div>
-            </article>
-
-     
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🐙</div>
-                        <h3>Polvos</h3>
-                        <p class="fake-info">❌ Polvos têm 6 corações</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🐙</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Polvos têm 3 corações! Dois bombeiam sangue para as brânquias</p>
-                        <div class="fun-fact">🎯 Curiosidade: O sangue do polvo é azul devido ao cobre</div>
-                    </div>
-                </div>
-            </article>
-
+// Menu mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.querySelector('.menu-mobile');
+    const nav = document.querySelector('.cabecalho nav');
     
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🐻‍❄️</div>
-                        <h3>Ursos Polares</h3>
-                        <p class="fake-info">❌ A pele do urso polar é branca</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🐻‍❄️</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ A pele do urso polar é preta! Os pelos são transparentes</p>
-                        <div class="fun-fact">🎯 Curiosidade: Podem cheirar uma foca a 32 km de distância</div>
-                    </div>
-                </div>
-            </article>
-
-       
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🦎</div>
-                        <h3>Camaleões</h3>
-                        <p class="fake-info">❌ Mudam de cor apenas para camuflagem</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🦎</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Mudam de cor para se comunicar e expressar emoções!</p>
-                        <div class="fun-fact">🎯 Curiosidade: A língua pode ser tão longa quanto seu corpo</div>
-                    </div>
-                </div>
-            </article>
-
-         
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🐘</div>
-                        <h3>Elefantes</h3>
-                        <p class="fake-info">❌ Elefantes não conseguem pular</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🐘</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Isso é verdade! São os únicos mamíferos que não pulam</p>
-                        <div class="fun-fact">🎯 Curiosidade: Têm excelente memória e reconhecem parentes</div>
-                    </div>
-                </div>
-            </article>
-
-        
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🐋</div>
-                        <h3>Cachalotes</h3>
-                        <p class="fake-info">❌ Cachalotes dormem por horas seguidas</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🐋</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Cachalotes fazem micro-sonecas de 10-15 minutos!</p>
-                        <div class="fun-fact">🎯 Curiosidade: Dormem em posição vertical na água</div>
-                    </div>
-                </div>
-            </article>
-
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🦎</div>
-                        <h3>Axolotes</h3>
-                        <p class="fake-info">❌ Axolotes são apenas salamandras comuns</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🦎</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Axolotes podem regenerar coração, cérebro e membros!</p>
-                        <div class="fun-fact">🎯 Curiosidade: Nunca sofrem metamorfose completa</div>
-                    </div>
-                </div>
-            </article>
-
-       
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🐨</div>
-                        <h3>Coalas</h3>
-                        <p class="fake-info">❌ Coalas dormem pouco como outros animais</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🐨</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Coalas dormem de 18 a 22 horas por dia!</p>
-                        <div class="fun-fact">🎯 Curiosidade: Dormem tanto por causa da dieta pobre em energia</div>
-                    </div>
-                </div>
-            </article>
-
-          
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🐴</div>
-                        <h3>Cavalos-marinhos</h3>
-                        <p class="fake-info">❌ Fêmeas carregam os filhotes</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🐴</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Machos que engravidam e dão à luz os filhotes!</p>
-                        <div class="fun-fact">🎯 Curiosidade: Podem dar à luz até 2000 filhotes de uma vez</div>
-                    </div>
-                </div>
-            </article>
-
+    if (menuBtn) {
+        menuBtn.addEventListener('click', function() {
+            nav.classList.toggle('active');
+        });
+    }
     
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🦫</div>
-                        <h3>Ornitorrincos</h3>
-                        <p class="fake-info">❌ Ornitorrincos não têm veneno</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🦫</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Machos têm esporões venenosos nas patas traseiras!</p>
-                        <div class="fun-fact">🎯 Curiosidade: São mamíferos que põem ovos</div>
-                    </div>
-                </div>
-            </article>
+    // Animação de scroll suave para os links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+    
+    // Adiciona efeito de hover nos cards
+    const cards = document.querySelectorAll('.cartao');
+    cards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.02)';
+            this.style.transition = 'transform 0.3s ease';
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+        });
+    });
+    
+    // Contador de visitas
+    let visitCount = localStorage.getItem('visitCount') || 0;
+    visitCount++;
+    localStorage.setItem('visitCount', visitCount);
+    
+    // Toast de boas-vindas na primeira visita
+    if (visitCount == 1) {
+        showWelcomeToast();
+    }
+    
+    // Animação dos números das estatísticas
+    animateStats();
+});
 
-            <article class="cartao">
-                <div class="cartao-interno">
-                    <div class="cartao-frente">
-                        <div class="card-icon">🦑</div>
-                        <h3>Lulas-colossais</h3>
-                        <p class="fake-info">❌ Olhos das lulas são pequenos</p>
-                        <div class="hover-instruction">👆 Passe o mouse</div>
-                    </div>
-                    <div class="cartao-verso">
-                        <div class="card-icon">🦑</div>
-                        <h3>Verdade!</h3>
-                        <p class="true-info">✅ Têm os maiores olhos do reino animal (até 27 cm)!</p>
-                        <div class="fun-fact">🎯 Curiosidade: Podem pesar até 500 kg</div>
-                    </div>
-                </div>
-            </article>
+function showWelcomeToast() {
+    const toast = document.createElement('div');
+    toast.innerHTML = '👋 Bem-vindo ao Conecta Aí! Passe o mouse nos 14 cards para descobrir curiosidades incríveis!';
+    toast.style.cssText = `
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        color: white;
+        padding: 1rem;
+        border-radius: 10px;
+        z-index: 1000;
+        animation: slideIn 0.5s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        max-width: 350px;
+        font-weight: bold;
+    `;
+    
+    document.body.appendChild(toast);
+    
+    setTimeout(() => {
+        toast.style.animation = 'slideOut 0.5s ease';
+        setTimeout(() => toast.remove(), 500);
+    }, 4000);
+}
 
-        <div class="statistics">
-            <div class="stat-card">
-                <span class="stat-number">12</span>
-                <span class="stat-label">Curiosidades</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">🐾</span>
-                <span class="stat-label">Animais Incríveis</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">✨</span>
-                <span class="stat-label">Desafie-se</span>
-            </div>
-            <div class="stat-card">
-                <span class="stat-number">🎯</span>
-                <span class="stat-label">Fatos Surpreendentes</span>
-            </div>
-        </div>
-    </main>
+function animateStats() {
+    const statNumbers = document.querySelectorAll('.stat-number');
+    statNumbers.forEach(stat => {
+        const text = stat.textContent;
+        if (!isNaN(parseInt(text))) {
+            const target = parseInt(text);
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    stat.textContent = target;
+                    clearInterval(timer);
+                } else {
+                    stat.textContent = Math.floor(current);
+                }
+            }, 20);
+        }
+    });
+}
 
-    <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>🐧 Conecta Aí</h4>
-                <p>Descobrindo verdades surpreendentes sobre o reino animal</p>
-            </div>
-            <div class="footer-section">
-                <h4>Contato</h4>
-                <p>📧 isadora.oliveira15@escola.pr.gov.br</p>
-                <p>📱 (43) 99656-1825</p>
-            </div>
-            <div class="footer-section">
-                <h4>Redes Sociais</h4>
-                <div class="social-links">
-                    <a href="#">📘</a>
-                    <a href="#">📷</a>
-                    <a href="#">🐦</a>
-                    <a href="#">🎵</a>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>✨ Conectando conhecimento com diversão! ✨</p>
-            <p class="copyright">© 2026 Conecta Aí - Todos os direitos reservados</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+// Adiciona animações personalizadas
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideIn {
+        from {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    @keyframes slideOut {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+`;
+document.head.appendChild(style);
